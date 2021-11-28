@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="70" viewBox="0 0 326 70">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #055;
+        font-size: 60px;
+        font-family: Cambria;
+      }
+    </style>
+  </defs>
+  <text id="Place_Holder" data-name="Place Holder" class="cls-1" transform="translate(0 57)"><tspan x="0" y="0">Place Holder</tspan></text>
+</svg>
