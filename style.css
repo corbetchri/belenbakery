@@ -1,189 +1,189 @@
 body,
 html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background-color: #07b5b2;
-  box-sizing: border-box;
-  font-family: "Karla", sans-serif;
+	background-color: #07b5b2;
+	box-sizing: border-box;
+	font-family: 'Karla', sans-serif;
 }
 
 .pageContainer {
-  position: relative;
-  height: 100%;
-  box-sizing: border-box;
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
 }
 
 .navBar {
-  z-index: 10;
-  overflow: auto;
-  position: relative;
-  text-align: center;
-  justify-content: center;
+	z-index: 10;
+	overflow: auto;
+	position: relative;
+	text-align: center;
+	justify-content: center;
 }
 
 .navBar a {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  font-size: 40px;
-  vertical-align: top;
-  font-family: "Satisfy", cursive;
-  margin: 20px 15px 0px 15px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	font-size: 40px;
+	vertical-align: top;
+	font-family: 'Satisfy', cursive;
+	margin: 20px 15px 0px 15px;
 }
 
 .navBar a:hover {
-  color: rgb(194, 146, 56);
+	color: rgb(194, 146, 56);
 }
 
 .homePageBottomContainer {
-  position: fixed;
-  color: white;
-  bottom: 0;
-  width: 100%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  text-align: center;
+	position: fixed;
+	color: white;
+	bottom: 0;
+	width: 100%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
 }
 
 .socialButtons p {
-  font-weight: 200;
-  margin-bottom: 10px;
-  margin-top: 10px;
+	font-weight: 200;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 .mainPageLogo {
-  position: absolute;
-  display: flex;
-  top: 49%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 280px;
-  height: auto;
-  max-width: 75%;
+	position: absolute;
+	display: flex;
+	top: 49%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 280px;
+	height: auto;
+	max-width: 75%;
 }
 
 @media screen and (max-height: 600px) {
-  .mainPageLogo {
-    width: 240px;
-  }
+	.mainPageLogo {
+		width: 240px;
+	}
 }
 @media screen and (max-height: 550px) {
-  .mainPageLogo {
-    width: 200px;
-  }
+	.mainPageLogo {
+		width: 200px;
+	}
 }
 @media screen and (min-width: 2000px) {
-  .mainPageLogo {
-    width: 500px;
-  }
+	.mainPageLogo {
+		width: 500px;
+	}
 }
 
 @media screen and (max-width: 470px) {
-  .navBar a {
-    font-size: 32px;
-    margin: 20px 8px 0px 8px;
-  }
-  .blurb {
-    font-size: 15px;
-    width: 95%;
-  }
+	.navBar a {
+		font-size: 32px;
+		margin: 20px 8px 0px 8px;
+	}
+	.blurb {
+		font-size: 15px;
+		width: 95%;
+	}
 }
 @media screen and (max-height: 650px) {
-  .blurb {
-    font-size: 13px;
-  }
+	.blurb {
+		font-size: 13px;
+	}
 }
 
 .blurb {
-  position: absolute;
-  color: white;
-  width: 75%;
-  text-align: center;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	color: white;
+	width: 75%;
+	text-align: center;
+	top: 48%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .blurb a {
-  text-decoration: none;
-  text-decoration: underline;
-  color: white;
+	text-decoration: none;
+	text-decoration: underline;
+	color: white;
 }
 
 /* SOCIAL BUTTONS */
 .icon-button:hover .icon-icon {
-  color: white;
+	color: white;
 }
 
 .icon-button .icon-icon {
-  color: #3b5998;
+	color: #3b5998;
 }
 
 .icon-button i {
-  background: none;
-  color: white;
-  height: 4rem;
-  left: 0;
-  line-height: 4rem;
-  position: absolute;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  width: 4rem;
-  z-index: 10;
-  top: 2px;
+	background: none;
+	color: white;
+	height: 4rem;
+	left: 0;
+	line-height: 4rem;
+	position: absolute;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 4rem;
+	z-index: 10;
+	top: 2px;
 }
 
 .facebook span {
-  background-color: #3b5998;
+	background-color: #3b5998;
 }
 
 .instagram span {
-  background-color: #a926a4;
+	background-color: #a926a4;
 }
 
 .icon-button {
-  background-color: white;
-  border-radius: 4rem;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 2rem;
-  height: 4rem;
-  line-height: 4rem;
-  margin: 0 5px;
-  position: relative;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 4rem;
+	background-color: white;
+	border-radius: 4rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2rem;
+	height: 4rem;
+	line-height: 4rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 4rem;
 }
 
 /* Circle */
 .icon-button span {
-  border-radius: 0;
-  display: block;
-  height: 0;
-  left: 50%;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  width: 0;
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 0;
 }
 
 .icon-button:hover span {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 4rem;
-  margin: -2rem;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 4rem;
+	margin: -2rem;
 }

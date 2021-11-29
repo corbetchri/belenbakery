@@ -12,19 +12,19 @@
 	<body>
 		<header>
 			<div class="navbar">
-				<button>
+				<button onclick="scrollToHome()" id="homeNav">
 					<h5>home</h5>
 					<div class="line" />
 				</button>
-				<button>
+				<button onclick="scrollToAbout()" id="aboutNav">
 					<h5>about</h5>
 					<div class="line" />
 				</button>
-				<button>
+				<button onclick="scrollToOrder()" id="orderNav">
 					<h5>order</h5>
 					<div class="line" />
 				</button>
-				<button>
+				<button onclick="scrollToContact()" id="contactNav">
 					<h5>contact</h5>
 					<div class="line" />
 				</button>
@@ -32,13 +32,13 @@
 		</header>
 		<main>
 			<div class="home-page">
-				<section class="landing">
+				<section class="landing" id="home">
 					<div class="logo">
 						<img src="assets/images/belen.svg" alt="belen_logo" />
 						<img src="assets/images/place_holder.svg" alt="placeholder" />
 					</div>
 				</section>
-				<section class="about">
+				<section class="about" id="about">
 					<div class="section-header">
 						<h2>about</h2>
 					</div>
@@ -67,7 +67,7 @@
 						<p>We deliver every Wednesday and Saturday.</p>
 					</div>
 				</section>
-				<section class="order">
+				<section class="order" id="order">
 					<div class="section-header">
 						<h2>Order here</h2>
 					</div>
@@ -87,7 +87,7 @@
 						</iframe>
 					</div>
 				</section>
-				<section class="contact">
+				<section class="contact" id="contact">
 					<div class="section-header">
 						<h2>contact</h2>
 					</div>
@@ -109,10 +109,10 @@
 								<img src="./assets/images/image_1.jpg" alt="" />
 							</a>
 							<a class="link" href="">
-								<img src="" alt="" />
+								<img src="./assets/images/image_1.jpg" alt="" />
 							</a>
 							<a class="link" href="">
-								<img src="" alt="" />
+								<img src="./assets/images/image_1.jpg" alt="" />
 							</a>
 						</div>
 					</div>
@@ -123,10 +123,10 @@
 								<img src="./assets/images/image_2.jpg" alt="" />
 							</a>
 							<a class="link" href="">
-								<img src="" alt="" />
+								<img src="./assets/images/image_1.jpg" alt="" />
 							</a>
 							<a class="link" href="">
-								<img src="" alt="" />
+								<img src="./assets/images/image_1.jpg" alt="" />
 							</a>
 							<a class="link" href="">
 								<img src="./assets/images/facebook.svg" alt="" />
@@ -138,5 +138,66 @@
 		</main>
 
 		<script src="script.js" async defer></script>
+		<script>
+			function scrollToHome() {
+				document.getElementById('home').scrollIntoView({
+					behavior: 'smooth',
+				})
+			}
+			function scrollToAbout() {
+				document.getElementById('about').scrollIntoView({
+					behavior: 'smooth',
+				})
+			}
+			function scrollToOrder() {
+				document.getElementById('order').scrollIntoView({
+					behavior: 'smooth',
+				})
+			}
+			function scrollToContact() {
+				document.getElementById('contact').scrollIntoView({
+					behavior: 'smooth',
+				})
+			}
+
+			const sections = [
+				document.getElementById('home'),
+				document.getElementById('about'),
+				document.getElementById('order'),
+				document.getElementById('contact'),
+			]
+
+			const navItems = {
+				home: document.getElementById('homeNav'),
+				about: document.getElementById('aboutNav'),
+				order: document.getElementById('orderNav'),
+				contact: document.getElementById('contactNav'),
+			}
+
+			// intersection observer setup
+			const observerOptions = {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.7,
+			}
+			function observerCallback(entries, observer) {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const navItem = navItems[entry.target.id]
+						navItem.classList.add('active')
+						Object.values(navItems).forEach((item) => {
+							if (item != navItem) {
+								item.classList.remove('active')
+							}
+						})
+					}
+				})
+			}
+			const observer = new IntersectionObserver(
+				observerCallback,
+				observerOptions
+			)
+			sections.forEach((sec) => observer.observe(sec))
+		</script>
 	</body>
 </html>
