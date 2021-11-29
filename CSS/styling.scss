@@ -111,7 +111,7 @@ main {
 	.home-page {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(4, 100vh);
+		gap: 30px;
 		align-items: center;
 		justify-items: center;
 		max-width: 1500px;
@@ -171,45 +171,6 @@ main {
 				p {
 					z-index: 2;
 				}
-
-				&:hover {
-					// .bg {
-					// 	position: absolute;
-					// 	width: calc(100% + 120px);
-					// 	height: calc(100% + 30px);
-
-					// 	background-color: #ffffffc9;
-					// 	border-radius: 20px;
-					// 	z-index: 0;
-					// 	top: -15px;
-					// 	left: -15px;
-					// }
-					// &.one {
-					// 	.bg {
-					// 		margin: 40px 0 0 -10px;
-					// 		height: calc(100% + 0px);
-					// 	}
-					// }
-					// &.two {
-					// 	.bg {
-					// 		margin: 40px 0 0 -80px;
-					// 		height: calc(100% + 0px);
-					// 	}
-					// }
-					// &.three {
-					// 	.bg {
-					// 		margin: 40px 0 0 -80px;
-					// 		width: calc(100% + 80px);
-					// 		height: calc(100% + 0px);
-					// 	}
-					// }
-					// &.four {
-					// 	.bg {
-					// 		margin: 40px 0 0 -10px;
-					// 		height: calc(100% + 0px);
-					// 	}
-					// }
-				}
 			}
 		}
 
@@ -226,9 +187,9 @@ main {
 				height: 100%;
 				position: relative;
 
-				// iframe {
-				// 	height: 100vh !important;
-				// }
+				iframe {
+					height: 100vh !important;
+				}
 			}
 		}
 
