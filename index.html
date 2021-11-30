@@ -10,7 +10,15 @@
 		<link rel="stylesheet" href="./CSS/styling.css" />
 	</head>
 	<body>
-		<header>
+		<div class="nav-menu">
+			<div id="burger" onclick="openMenu()">
+				<img src="./assets/images/menu.svg" alt="menu" />
+			</div>
+			<div id="close" onclick="closeMenu()">
+				<img src="./assets/images/close.svg" alt="close" />
+			</div>
+		</div>
+		<header id="header">
 			<div class="navbar">
 				<button onclick="scrollToHome()" id="homeNav">
 					<h5>home</h5>
@@ -198,6 +206,16 @@
 				observerOptions
 			)
 			sections.forEach((sec) => observer.observe(sec))
+
+			// nav menu mobile
+			function openMenu() {
+				document.getElementById('header').classList.add('open')
+				document.getElementById('close').classList.add('open')
+			}
+			function closeMenu() {
+				document.getElementById('header').classList.remove('open')
+				document.getElementById('close').classList.remove('open')
+			}
 		</script>
 	</body>
 </html>

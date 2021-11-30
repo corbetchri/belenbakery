@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: #d6ffff;
+  position: relative;
 }
 
 body h2 {
@@ -47,7 +48,47 @@ body p {
   margin: 0;
 }
 
-@media screen and (max-width: 800px) {
+body .nav-menu {
+  display: none;
+  gap: 100px;
+  justify-self: flex-end;
+  padding: 20px;
+  z-index: 20;
+  position: fixed;
+}
+
+body .nav-menu #burger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+body .nav-menu #close {
+  position: absolute;
+  top: 23px;
+  left: 160px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+body .nav-menu #close img {
+  display: block;
+}
+
+body .nav-menu #close.open {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+body .nav-menu button {
+  padding: 5px;
+}
+
+@media screen and (max-width: 900px) {
   body h4 {
     font-size: 40px;
   }
@@ -57,11 +98,19 @@ body p {
 }
 
 @media screen and (max-width: 500px) {
+  body h2 {
+    font-size: 50px;
+  }
   body h4 {
     font-size: 30px;
   }
   body p {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  body .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -75,7 +124,7 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: #ffffffb3;
+  background-color: #ffffff;
 }
 
 header .navbar {
@@ -103,14 +152,49 @@ header .navbar {
 }
 
 @media screen and (max-width: 500px) {
+  header {
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+    right: unset;
+    border-radius: 0px 20px 20px 20px;
+  }
   header .navbar {
     gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
   }
   header .navbar button {
-    padding: 5px 30px;
+    padding: 10px 30px;
   }
   header .navbar button p {
     font-size: 24px;
+  }
+  header .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+    width: 150px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: auto;
+    padding: 30px;
+  }
+  header.open {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
@@ -211,6 +295,15 @@ main .home-page .about .title-text h4 {
 
 main .home-page .about .title-text p {
   z-index: 2;
+}
+
+@media screen and (max-width: 500px) {
+  main .home-page .about .title-text {
+    padding: 20px 20px 0 20px;
+  }
+  main .home-page .about .title-text .bg {
+    top: 35px;
+  }
 }
 
 main .home-page .order {
@@ -352,7 +445,8 @@ main .home-page .section-header h2 {
 
 @media screen and (max-width: 500px) {
   main .home-page {
-    padding: 30px;
+    gap: 60px;
+    padding: 20px;
   }
 }
 
